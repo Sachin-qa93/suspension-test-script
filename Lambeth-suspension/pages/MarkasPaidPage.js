@@ -27,7 +27,7 @@ class MarkasPaidPage {
 
         await this.page.waitForTimeout(2000);
 
-        await this.searchBox.fill('LSS0135348');
+        await this.searchBox.fill('LSS0135439');
 
         await this.page.keyboard.press('Enter');
 
@@ -46,7 +46,7 @@ class MarkasPaidPage {
         await this.page.waitForTimeout(2000);
         await this.fullyPaidCheckbox.click();
         await this.confirmPaymentBtn.click();
-
+        await this.page.waitForTimeout(2000);
     }
 }
 

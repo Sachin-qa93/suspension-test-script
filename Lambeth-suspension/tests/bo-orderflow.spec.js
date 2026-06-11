@@ -41,7 +41,7 @@ const suspensionPage = new BOSuspensionPage(page);
 
     console.log('Suspension Flow started');
 
-    await page.waitForTimeout(50000);
+    await page.waitForTimeout(5000);
     console.log('Suspension Flow completed successfully and order is created ');
-await page.pause();
+//await page.pause();
 });

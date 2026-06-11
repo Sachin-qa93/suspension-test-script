@@ -49,6 +49,6 @@ test('BO Amend Approve Flow', async () => {
 
     
     );
-
-    await page.pause();
+console.log('Successfully Approved');
+    //await page.pause();
 });

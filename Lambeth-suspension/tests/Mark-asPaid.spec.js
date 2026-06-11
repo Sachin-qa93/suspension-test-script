@@ -49,6 +49,6 @@ test('Mark as Paid Flow', async () => {
 
     
     );
-console.log('\x1b[32m%s\x1b[0m', 'Mark as Paid completed successfully');
-    await page.pause();
+console.log('\x1b[32m%s\x1b[0m', 'Payment is successfull by mark as paid button ');
+    //await page.pause();
 });

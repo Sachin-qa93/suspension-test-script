@@ -34,11 +34,11 @@ class FOOrderPage {
         await this.ApplyButton.click();
         await this.textSpan.click();
         await this.page.locator(this.suspensionReason) .selectOption('DOMESTIC_REMOVE');
-        await this.page.locator(this.startDate).fill('02/06/2026');  
+        await this.page.locator(this.startDate).fill('01/07/2026');  
         await this.page.waitForTimeout(2000);
         await this.page.locator(this.startTime).fill('09:30');
         await this.page.waitForTimeout(2000);
-        await this.page.locator(this.endDate) .fill('02/06/2026');
+        await this.page.locator(this.endDate) .fill('02/07/2026');
    
         //await this.page.keyboard.press('Tab');
 
@@ -85,27 +85,16 @@ await this.page.locator(this.houseNumber)
     
     await this.OrderproceedButton.click();
     await this.page.waitForTimeout(5000);
-    await this.body.click({
-
-    position: {
-
-        x: 1500,
-
-        y: 200
-
-    },
-
-    force: true
-
-});
+    
 
 await this.page.waitForTimeout(2000);
     await this.testingtoolButton.click();
     await this.page.waitForTimeout(2000);
     await this.firstDropdownItem.click();
     await this.processButton.click();
-    await this.authenticateBtn.waitFor({ state: 'visible', timeout: 3000 });
+    await this.authenticateBtn.waitFor({ state: 'visible', timeout: 6000 });
     await this.authenticateBtn.click();
+    await this.page.waitForTimeout(6000);
     }
 }
 
