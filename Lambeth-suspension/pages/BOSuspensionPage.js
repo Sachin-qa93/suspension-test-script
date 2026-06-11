@@ -53,11 +53,11 @@ class SuspensionPage {
 
         await this.page.locator(this.suspensionReason) .selectOption('DOMESTIC_REMOVE');
           
-        await this.page.locator(this.startDate).fill('17/06/2026');  
+        await this.page.locator(this.startDate).fill('19/06/2026');  
         await this.page.waitForTimeout(2000);
         await this.page.locator(this.startTime).fill('09:30');
         await this.page.waitForTimeout(2000);
-        await this.page.locator(this.endDate) .fill('18/06/2026');
+        await this.page.locator(this.endDate) .fill('20/06/2026');
    
         //await this.page.keyboard.press('Tab');
 

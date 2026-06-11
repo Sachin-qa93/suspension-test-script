@@ -27,7 +27,7 @@ class BOAmendApprovePage {
         
         await this.searchBox.click();
          await this.page.waitForTimeout(2000);
-      await this.searchBox.fill('LSS0135439');
+      await this.searchBox.fill('LSS0135519');
 
        await this.page.keyboard.press('Enter');
        await this.page.waitForTimeout(5000);
