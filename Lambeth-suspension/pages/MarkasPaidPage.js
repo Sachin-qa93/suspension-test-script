@@ -27,7 +27,7 @@ class MarkasPaidPage {
 
         await this.page.waitForTimeout(2000);
 
-        await this.searchBox.fill('LSS0135428');
+        await this.searchBox.fill('LSS0135530');
 
         await this.page.keyboard.press('Enter');
 

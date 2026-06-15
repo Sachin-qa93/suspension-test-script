@@ -47,6 +47,6 @@ test('Create FO Order Flow', async () => {
 
     await orderPage.createFOOrder();
     console.log('order Successfully created');
-  await page.waitForTimeout(5000);
+  
     //await page.pause();
 });

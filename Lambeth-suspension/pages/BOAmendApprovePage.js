@@ -27,7 +27,7 @@ class BOAmendApprovePage {
         
         await this.searchBox.click();
          await this.page.waitForTimeout(2000);
-      await this.searchBox.fill('LSS0135519');
+      await this.searchBox.fill('LSS0135563');
 
        await this.page.keyboard.press('Enter');
        await this.page.waitForTimeout(5000);
@@ -38,7 +38,7 @@ class BOAmendApprovePage {
         await this.inspectionNotes.fill('test'); 
         await this.proceedBtn.click();
         await this.proceedBtn2.click();
-        await this.page.waitForTimeout(6000);
+        await this.page.waitForTimeout(8000);
         //mark as paid started 
         //await this.markPaid.click();
         
