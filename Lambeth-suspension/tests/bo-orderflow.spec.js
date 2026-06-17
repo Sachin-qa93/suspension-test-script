@@ -2,7 +2,7 @@ const { test, chromium } = require('@playwright/test');
 
 const BOLoginPage = require('../pages/BOLoginPage');
 
-const BOSuspensionPage = require('../pages/BOSuspensionPage');
+const BoOrderCreationPage = require('../pages/BoOrderCreationPage');
 const config = require('../utils/config');
 
 test('Create Suspension Order Flow', async () => {
@@ -23,7 +23,7 @@ test('Create Suspension Order Flow', async () => {
 
     const loginPage = new BOLoginPage(page);
 
-const suspensionPage = new BOSuspensionPage(page);
+const suspensionPage = new BoOrderCreationPage(page);
     console.log('Opening Website');
 
     await loginPage.navigate(config.BO.url);
@@ -37,11 +37,11 @@ const suspensionPage = new BOSuspensionPage(page);
 
     console.log('Login Successful');
 
-    await suspensionPage.createSuspension();
+    await suspensionPage.createOrder();
 
-    console.log('Suspension Flow started');
+    console.log('Order Flow started');
 
     await page.waitForTimeout(5000);
-    console.log('Suspension Flow completed successfully and order is created ');
+    console.log('Order Flow completed successfully and order is created ');
 //await page.pause();
 });

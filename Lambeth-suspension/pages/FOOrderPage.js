@@ -34,11 +34,11 @@ class FOOrderPage {
         await this.ApplyButton.click();
         await this.textSpan.click();
         await this.page.locator(this.suspensionReason) .selectOption('DOMESTIC_REMOVE');
-        await this.page.locator(this.startDate).fill('07/07/2026');  
+        await this.page.locator(this.startDate).fill('11/07/2026');  
         await this.page.waitForTimeout(2000);
         await this.page.locator(this.startTime).fill('09:30');
         await this.page.waitForTimeout(2000);
-        await this.page.locator(this.endDate) .fill('08/07/2026');
+        await this.page.locator(this.endDate) .fill('12/07/2026');
    
         //await this.page.keyboard.press('Tab');
 
