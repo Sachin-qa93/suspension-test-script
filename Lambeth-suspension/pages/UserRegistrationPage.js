@@ -1,3 +1,5 @@
+
+ const config = require('../utils/config');
 class UserRegistrationPage {
 
     constructor(page) {
@@ -27,27 +29,31 @@ class UserRegistrationPage {
 
 
     async RegisterUser() {
-     
+    const user = config.Registration; 
  await this.ApplyBtn.click();
- await this.suspensionBtn.click();
- await this.FirstName.fill('dev');
- await this.ContactNumber.fill('67654676656');
- await this.email.fill('dev@gmail.com');
- await this.Password.fill('Pass@123');
- await this.LastName.fill('rathi');
- await this.SecondaryContactNumber.fill('1234346565');
- await this.RepeatEmail.fill('dev@gmail.com');
- await this.RepeatPassword.fill('Pass@123');
- await this.Clickhere.click();
- await this.page.waitForTimeout(5000);
- await this.Adreessline1.fill('1 Brixton Hill');
- await this.Adreessline2.fill('Lambeth');
- await this.City.fill('London');
-  await this.Postalcode.fill('SW2 5SG');
-  await this.Proceedbtn.click();
- 
-await this.page.waitForTimeout(10000);
-console.log('User Registration Completed');
+    await this.suspensionBtn.click();
+
+    await this.FirstName.fill(user.firstName);
+    await this.ContactNumber.fill(user.contactNumber);
+    await this.email.fill(user.email);
+    await this.Password.fill(user.password);
+    await this.LastName.fill(user.lastName);
+    await this.SecondaryContactNumber.fill(user.secondaryContactNumber);
+    await this.RepeatEmail.fill(user.email);
+    await this.RepeatPassword.fill(user.password);
+
+    await this.Clickhere.click();
+    await this.page.waitForTimeout(5000);
+
+    await this.Adreessline1.fill(user.addressLine1);
+    await this.Adreessline2.fill(user.addressLine2);
+    await this.City.fill(user.city);
+    await this.Postalcode.fill(user.postalCode);
+
+    await this.Proceedbtn.click();
+
+    await this.page.waitForTimeout(10000);
+    console.log('User Registration Completed');
 
     }
 

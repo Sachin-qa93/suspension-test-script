@@ -1,3 +1,5 @@
+const config = require('../utils/config');
+
 class FOOrderPage {
 
     constructor(page) {
@@ -33,25 +35,30 @@ class FOOrderPage {
         console.log('FO Order Started');
         await this.ApplyButton.click();
         await this.textSpan.click();
-        await this.page.locator(this.suspensionReason) .selectOption('DOMESTIC_REMOVE');
-        await this.page.locator(this.startDate).fill('11/07/2026');  
+        await this.page.locator(this.suspensionReason)
+    .selectOption(config.Data.suspensionReason);
+        await this.page.locator(this.startDate).fill(config.Data.startDate); 
+     
         await this.page.waitForTimeout(2000);
-        await this.page.locator(this.startTime).fill('09:30');
+        await this.page.locator(this.startTime).fill(config.Data.startTime);
+    
         await this.page.waitForTimeout(2000);
-        await this.page.locator(this.endDate) .fill('12/07/2026');
+        await this.page.locator(this.endDate).fill(config.Data.endDate);
+    
    
         //await this.page.keyboard.press('Tab');
 
         await this.page.waitForTimeout(2000);
 
-       await this.page.locator(this.endTime).fill('18:30');
+       await this.page.locator(this.endTime).fill(config.Data.endTime);
+    
        await this.searchBox.click();
 
        await this.searchBox.click();
 
-        await this.searchBox.pressSequentially('Mowll Street');
+       await this.searchBox.pressSequentially(config.Data.searchStreet);
 
-        await this.page.waitForTimeout(5000);
+       await this.page.waitForTimeout(5000);
 
        // await this.page.keyboard.press('ArrowDown');
 
@@ -84,17 +91,17 @@ await this.page.locator(this.houseNumber)
     
     
     await this.OrderproceedButton.click();
-    await this.page.waitForTimeout(5000);
+    await this.page.waitForTimeout(8000);
     
 
-await this.page.waitForTimeout(2000);
-    await this.testingtoolButton.click();
+
+    await this.testingtoolButton.click({ force: true });
     await this.page.waitForTimeout(2000);
     await this.firstDropdownItem.click();
     await this.processButton.click();
     await this.authenticateBtn.waitFor({ state: 'visible', timeout: 6000 });
     await this.authenticateBtn.click();
-    await this.page.waitForTimeout(6000);
+    await this.page.waitForTimeout(10000);
     }
 }
 

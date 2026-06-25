@@ -1,3 +1,4 @@
+const config = require('../utils/config');
 class BOAmendApprovePage {
 
     constructor(page) {
@@ -23,11 +24,11 @@ class BOAmendApprovePage {
     async amendApproveFlow() {
          await this.ordersmenu.click();
         await this.checkbox.click();
-        await this.page.waitForTimeout(5000);
+        await this.page.waitForTimeout(2000);
         
         await this.searchBox.click();
          await this.page.waitForTimeout(2000);
-      await this.searchBox.fill('LSS0135563');
+      await this.searchBox.fill(config.TestData.suspensionId);
 
        await this.page.keyboard.press('Enter');
        await this.page.waitForTimeout(5000);

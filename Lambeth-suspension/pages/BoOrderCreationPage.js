@@ -1,4 +1,6 @@
+const config = require('../utils/config');
 class SuspensionPage {
+    
 
     constructor(page) {
 
@@ -41,7 +43,8 @@ class SuspensionPage {
 
         await this.page.locator(this.useExistingCustomer).click();
 
-        await this.page.locator(this.keyword).fill('sachin.rathi');
+       await this.page.locator(this.keyword)
+    .fill(config.Suspension.customerKeyword);
 
         await this.page.waitForLoadState('networkidle');
 
@@ -51,13 +54,20 @@ class SuspensionPage {
 
         await this.page.locator(this.proceedButton).click();
 
-        await this.page.locator(this.suspensionReason) .selectOption('DOMESTIC_REMOVE');
+        await this.page.locator(this.suspensionReason)
+    .selectOption(config.Suspension.reason);
           
-        await this.page.locator(this.startDate).fill('23/06/2026');  
-        await this.page.waitForTimeout(2000);
-        await this.page.locator(this.startTime).fill('09:30');
-        await this.page.waitForTimeout(2000);
-        await this.page.locator(this.endDate) .fill('24/06/2026');
+       await this.page.locator(this.startDate)
+    .fill(config.Suspension.startDate);
+
+await this.page.locator(this.startTime)
+    .fill(config.Suspension.startTime);
+
+await this.page.locator(this.endDate)
+    .fill(config.Suspension.endDate);
+
+await this.page.locator(this.endTime)
+    .fill(config.Suspension.endTime);
    
         //await this.page.keyboard.press('Tab');
 
@@ -68,7 +78,9 @@ class SuspensionPage {
 
        await this.searchBox.click();
 
-        await this.searchBox.pressSequentially('Mowll Street');
+        await this.searchBox.pressSequentially(
+    config.Suspension.searchStreet);
+
 
         await this.page.waitForTimeout(5000);
 
