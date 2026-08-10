@@ -73,7 +73,7 @@ await this.page.locator(this.endTime)
 
         await this.page.waitForTimeout(2000);
 
-       await this.page.locator(this.endTime).fill('18:30');
+      // await this.page.locator(this.endTime).fill('18:30');
        await this.searchBox.click();
 
        await this.searchBox.click();
