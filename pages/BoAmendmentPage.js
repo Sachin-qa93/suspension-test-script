@@ -74,7 +74,30 @@ await this.page.waitForTimeout(2000);
 
     async dateReduce() {
      
+const user = config.boamendmentreduceData; 
+    
 
+        console.log("Date Reduce Flow");
+
+      
+    await this.ordersmenu.click();
+
+        await this.searchBox.click();
+
+        
+
+        await this.searchBox.fill(user.orderId);
+await this.page.waitForTimeout(2000);
+    await this.orderId.click();
+    await this.page.waitForTimeout(5000);
+    await this.changeBtn.click();
+    await this.endBtn.click({State: 'visible', timeout: 5000});
+    await this.endBtn.clear();
+    await this.endBtn.fill(user.endDate);
+   await this.confirmBtn1.click({State: 'visible', timeout: 5000});
+    await this.page.waitForTimeout(2000);
+   await this.confirmBtn2.click({State: 'visible', timeout: 5000});
+   await this.page.waitForTimeout(5000);
 
     }
 

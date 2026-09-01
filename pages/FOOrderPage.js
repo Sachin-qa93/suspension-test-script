@@ -25,7 +25,7 @@ class FOOrderPage {
         this.firstDropdownItem = page.locator('(//a[@class="dropdown-item"])[1]');
         this.processButton = page.locator('//button[@id="process"]');
          this.authenticateBtn = page.frameLocator('#acsframe').getByRole('button', { name: 'Authenticate' });
-    
+        this.orderRefLink = page.locator('h3 a[href*="orderId="]');
     
         
         
@@ -129,6 +129,14 @@ class FOOrderPage {
     await this.authenticateBtn.waitFor({ state: 'visible', timeout: 20000 });
     await this.authenticateBtn.click();
     await this.page.waitForTimeout(5000);
+    }
+
+     async getOrderReference() {
+        await this.orderRefLink.waitFor({ state: 'visible', timeout: 20000 });
+        const refText = await this.orderRefLink.textContent();
+        return refText.trim();
+    
+    
     }
 }
 

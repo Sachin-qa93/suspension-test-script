@@ -58,5 +58,6 @@ test("BO - Date Extend", async () => {
 test("BO - Date Reduce", async () => {
 
     await amendmentPage.dateReduce();
+    console.log("Date reduce successfully");
 
 });

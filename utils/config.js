@@ -20,19 +20,19 @@ module.exports = {
     //Fo order creation data 
     FOOrderData: {
         suspensionReason: 'Access',
-        startDate: '26/07/2026',
-        endDate: '26/07/2026',
+        startDate: '26/09/2026',
+        endDate: '26/09/2026',
         searchAddress: 'chalkhill road',
          paymentMethod: 'Pay by debit/credit card',
          bayDescription: 'Test '
     },
     orderApproveData: {
-        suspensionId: 'HFS0010816',
+        suspensionId: 'HFS0016630',
         
     },
     //Mark as paid data 
   MarkasPaidData: {
-    orderId: 'HFS0010816',
+    orderId: 'HFS0016732',
     paymentType: 'Pay by debit/credit card',
         paymentRef: 'test 123',
   },
@@ -41,46 +41,46 @@ module.exports = {
         customerName: 'Sachin.rathi',
         suspensionReason: 'Access',
         permitNumber: 'test123',
-        startDate: '18/07/2026',
-        endDate: '18/07/2026',
+        startDate: '14/09/2026',
+        endDate: '14/09/2026',
         searchAddress: 'chalkhill road',
         descriptionText: 'Supercop123',
     },
     
     //user registration data
     registrationData: {
-        firstName: 'vijay',
+        firstName: 'Pawan',
         lastName: 'rathi',
-        contactNumber: '84565476',
-        secondaryContactNumber: '86567656',
+        contactNumber: '45768976',
+        secondaryContactNumber: '3654776',
         companyName: 'onov8',
-        email: 'vijay936814@gmail.com',
-        password: 'Test@123',
-        repeatPassword: 'Test@123',
+        email: 'pawan936814@gmail.com',
+        password: 'Pass@123',
+        repeatPassword: 'Pass@123',
         address: 'W6 9JU',
-        repeatEmail: 'vijay936814@gmail.com',
+        repeatEmail: 'pawan936814@gmail.com',
     },
     //FOAmendment data
     foamendmentextendData: {
-    suspensionId: 'HFS0010736',
-    endDate: '06/08/2026',
+    suspensionId: 'HFS0016776',
+    endDate: '16/09/2026',
     paymentMethod: 'Pay by debit/credit card',
 },
 
 foamendmentreduceData: {
-    suspensionId: 'HFS0010736',
-    endDate: '05/08/2026',
+    suspensionId: 'HFS0016776',
+    endDate: '15/09/2026',
 },
 
 // BOAmendment data
 boamendmentextendData: {
-    orderId: 'HFS0010816',
-    endDate: '13/08/2026',
+    orderId: 'HFS0016787',
+    endDate: '16/09/2026',
 },
 
 boamendmentreduceData: {
-    orderId: 'HFS0010816',
-    endDate: '05/08/2026',
+    orderId: 'HFS0016754',
+    endDate: '14/09/2026',
 },
 
 

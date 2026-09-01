@@ -22,6 +22,8 @@ class BOOrdercreationPage {
         this.proceedBtn3 = page.locator('//button[@class="form__button proceed baysValidateBtn"]'); 
         this.checkboxBtn = page.locator('//input[@id="termsAndCondition"]'); 
         this.proceedBtn4 = page.locator('//button[@class="form__button proceed mr-3"]');
+        this.orderRefLink = page.locator('h3 a[href*="orderId="]');
+
     }
 
     async createOrder() {
@@ -75,7 +77,7 @@ class BOOrdercreationPage {
    await this.page.waitForTimeout(3000);
    await expect(this.descriptionText).toBeVisible({timeout: 5000});
     await this.descriptionText.fill(user.descriptionText);
-    await this.page.waitForTimeout(3000);
+    await this.page.waitForTimeout(5000);
     await this.updateBtn.click();
     await this.proceedBtn3.click();
      
@@ -102,6 +104,15 @@ class BOOrdercreationPage {
 
         
     }
+
+async getOrderReference() {
+        await this.orderRefLink.waitFor({ state: 'visible', timeout: 20000 });
+        const refText = await this.orderRefLink.textContent();
+        return refText.trim();
+    
+    
+    }
+
 }
 
 

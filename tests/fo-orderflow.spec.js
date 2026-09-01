@@ -48,4 +48,9 @@ test('Create FO Order Flow', async () => {
     await orderPage.createFOOrder();
 console.log('order Successfully created');
     //await page.pause();
+
+     const orderRef = await orderPage.getOrderReference();
+    console.log('✅ Created Order Reference:', orderRef);
+
+
 });

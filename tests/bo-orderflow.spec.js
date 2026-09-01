@@ -38,5 +38,13 @@ const orderPage = new BOOrdercreationPage(page);
     console.log('Login Successful');
 
     await orderPage.createOrder();
+
+    console.log('order successfully booked from bo');
     //await page.pause();
+
+
+const orderRef = await orderPage.getOrderReference();
+    console.log('✅ Created Order Reference:', orderRef);
+
+
 });
